@@ -4,7 +4,7 @@ import { View, Text } from 'react-native'
 function AboutScreen() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Hakkimda</Text>
+      <Text>konum</Text>
     </View>
   );
 }

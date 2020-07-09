@@ -10,7 +10,7 @@ import Box from './components/box';
 import MyTabBar from './components/tab-bar';
 import HomeScreen from './views/home';
 import ContactScreen from './views/contact';
-import AboutScreen from './views/about';
+import AboutScreen from './views/location';
 import DetailView from './views/detail';
 
 import theme from './utils/theme';
