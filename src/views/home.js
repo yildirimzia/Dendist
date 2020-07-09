@@ -1,10 +1,7 @@
 import * as React from 'react';
 import {View, Text, Button} from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
-import DetailView from '../views/detail';
 
-
-const Stack = createStackNavigator();
 
 function HomeScreen({navigation}) {
   return (
@@ -15,15 +12,6 @@ function HomeScreen({navigation}) {
         onPress={() => navigation.navigate('Detail')}
       />
     </View>
-  );
-}
-
-function DetailStack() {
-  return (
-  <HomeStack.Navigator>
-    <HomeStack.Screen name="Ana Sayfa" component={HomeScreen} />
-    <HomeStack.Screen name="Detail" component={DetailView} />
-  </HomeStack.Navigator>
   );
 }
 
