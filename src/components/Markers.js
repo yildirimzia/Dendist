@@ -1,9 +1,8 @@
 import * as React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import MapView, { Marker } from 'react-native-maps';
+import { View, Text, StyleSheet,Image } from 'react-native';
+import MapView, {Marker} from 'react-native-maps';
 
 function Markers() {
-
   state={ 
     region:{
       latitude: 37.78825,
@@ -21,24 +20,27 @@ function Markers() {
           description: 'Feneryolu Mahallesi, Bağdat Cd. No:117/8, 34726 Kadıköy/İstanbul'
         }
     ]  
-    
-  }
+  };
+  
 
   return (
     <View style={styles.container}>
      <MapView
        style={styles.map}
        region={this.state.region}
-     >
+       loadingEnabled={true}
+        showsUserLocation={true}>
 
        {
          this.state.markers.map((marker,key) =>( 
           <Marker 
-            key={marker.key}
+            key={key}
             coordinate={marker.latlng}
             title={marker.title}
             description={marker.description}
-          />
+          >
+            <Image  source={require('../assets/location1.png')} />
+            </Marker>
          ))
        }
      </MapView>
@@ -56,6 +58,8 @@ const styles = StyleSheet.create({
   map: {
     ...StyleSheet.absoluteFillObject,
   },
+ 
+
  });
 
 export default Markers;
