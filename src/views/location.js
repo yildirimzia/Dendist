@@ -4,28 +4,31 @@ import MapView from 'react-native-maps';
 
 
 function AboutScreen() {
+
+  state={ 
+    region:{
+      latitude: 37.78825,
+      longitude: -122.4324,
+      latitudeDelta: 0.015,
+      longitudeDelta: 0.0121,
+    }
+  }
+
   return (
-<View style={styles.container}>
+    <View style={styles.container}>
      <MapView
-      
        style={styles.map}
-       region={{
-         latitude: 37.78825,
-         longitude: -122.4324,
-         latitudeDelta: 0.015,
-         longitudeDelta: 0.0121,
-       }}
+       region={this.state.region}
      >
      </MapView>
-   </View>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     ...StyleSheet.absoluteFillObject,
-    height: 400,
-    width: 400,
+
     justifyContent: 'flex-end',
     alignItems: 'center',
   },
