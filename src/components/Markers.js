@@ -9,16 +9,16 @@ function Markers() {
     <MapView
       style={styles.map}
       region={{
-        latitude: 37.78825,
-        longitude: -122.4324,
+        latitude: 40.978692,
+        longitude: 29.046238,
         latitudeDelta: 0.015,
         longitudeDelta: 0.0121,
       }}
     >
        <Marker 
         coordinate={{
-        latitude: 37.78825,
-        longitude: -122.4324,
+        latitude: 40.978692,
+        longitude: 29.046238,
         }}
         image={require('../assets/location1.png')}
         title= "Diş Hekimi Tuğba Duymaz"
