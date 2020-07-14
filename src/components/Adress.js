@@ -1,5 +1,6 @@
 import * as React from 'react';
 import {View, Text, StyleSheet,} from 'react-native';
+import {Facebook, İnstagram,Linkedin,Twitter} from '../components/icons';
 
 function Adress() {
   return (
@@ -12,6 +13,12 @@ function Adress() {
       <Text style={adress.wp}>
        Adres:
       <Text style={adress.adressDetail}> Feneryolu Mahallesi, Bağdat Caddesi, No:117/8, 34726 Kadıköy, İstanbul</Text>
+      </Text>
+      <Text>
+        <Facebook />
+        <İnstagram />
+        <Linkedin />
+        <Twitter />
       </Text>
     </View>
   );

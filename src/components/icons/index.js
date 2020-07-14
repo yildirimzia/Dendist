@@ -1,3 +1,7 @@
+export { default as Facebook } from './Facebook'
 export { default as Home } from './Home'
+export { default as İnstagram } from './İnstagram'
+export { default as Linkedin } from './Linkedin'
 export { default as MapPin } from './MapPin'
 export { default as Phone } from './Phone'
+export { default as Twitter } from './Twitter'
