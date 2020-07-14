@@ -1,7 +1,7 @@
 import * as React from 'react';
 // import Region from '../components/Region';
 import Markers from '../components/Markers';
-import { View ,Text,StyleSheet,ScrollView} from 'react-native';
+import { View ,Text,StyleSheet} from 'react-native';
 import Adress from '../components/Adress';
 
 function AboutScreen() {
@@ -14,11 +14,11 @@ function AboutScreen() {
       <View style={location.boxOne}>
         <Markers/>
       </View>
-      <ScrollView>
+    
       <View style={location.boxTwo}>
       <Adress />
       </View>
-      </ScrollView>
+    
 
     </View>
   

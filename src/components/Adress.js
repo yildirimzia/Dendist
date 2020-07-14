@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {View, Text, StyleSheet,ScrollView} from 'react-native';
+import {View, Text, StyleSheet,} from 'react-native';
 
 function Adress() {
   return (
@@ -23,6 +23,7 @@ const adress = StyleSheet.create({
     marginVertical: 20,
     backgroundColor: '#fff',
     borderRadius: 10,
+    flex:1,
     shadowColor: 'black',
     padding: 20,
     shadowOpacity: .1,
