@@ -1,25 +1,35 @@
 import * as React from 'react';
-import {View, Text, StyleSheet,} from 'react-native';
+import {View, Text, StyleSheet,Linking} from 'react-native';
 import {Facebook, İnstagram,Linkedin,Twitter} from '../components/icons';
+
+
 
 function Adress() {
   return (
     <View style={adress.container}>
       <Text style={adress.contactTitle}>İletişim</Text>
       <Text style={adress.contactContent}>
-        Bilgi almak için iletisim@tduymaz.com  adresine mail atabilir veya telefonumuzdan ulaşabilirsiniz.
+        Bilgi almak için iletisim@tduymaz.com adresine mail atabilir veya telefonumuzdan ulaşabilirsiniz.
       </Text>
       <Text style={adress.wp}>Telefon / Whatsapp: 0543 482 8640</Text>
       <Text style={adress.wp}>
-       Adres:
-      <Text style={adress.adressDetail}> Feneryolu Mahallesi, Bağdat Caddesi, No:117/8, 34726 Kadıköy, İstanbul</Text>
+        Adres:
+        <Text style={adress.adressDetail}>Feneryolu Mahallesi, Bağdat Caddesi, No:117/8, 34726 Kadıköy, İstanbul</Text>
       </Text>
-      <Text>
-        <Facebook />
-        <İnstagram />
-        <Linkedin />
-        <Twitter />
-      </Text>
+      <View style={adress.iconsStyle}>
+        <Text onPress={() => Linking.openURL('http://facebook.com/dttduymaz')}>
+          <Facebook style={adress.iconFacebook}/>
+        </Text>
+        <Text onPress={() => Linking.openURL('https://www.instagram.com/tduymaz/')}>
+          <İnstagram style={adress.iconInstagram} />
+        </Text>
+        <Text onPress={() => Linking.openURL('https://www.linkedin.com/in/tugbaduymaz/')}>
+        <Linkedin style={adress.iconLinkledin} />
+        </Text>
+        <Text onPress={() => Linking.openURL('https://twitter.com/DuymazTugba')}>
+          <Twitter style={adress.iconTwitter} />
+        </Text>
+      </View>
     </View>
   );
 }
@@ -63,6 +73,23 @@ const adress = StyleSheet.create({
     fontSize: 15,
     marginTop: 10,
     textAlign: 'center',
+  },
+  iconsStyle: {
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+    marginTop:50,
+  },
+  iconFacebook: {
+    color: '#3b5998',
+  },
+  iconInstagram: {
+    color: '#3f729b',
+  },
+  iconLinkledin: {
+    color: '#0072b1',
+  },
+  iconTwitter: {
+    color: '#00acee',
   }
 })
 
